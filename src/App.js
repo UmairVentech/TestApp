@@ -11,6 +11,7 @@ import Pictures from "./pages/Pictures";
 import Products from "./pages/Products";
 import Services from "./pages/Services";
 import Production from "./pages/Production";
+import Registration from "./pages/Registration";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/services" element={<Services />} />
         <Route path="/production" element={<Production />} />
+        <Route path="/registration" element={<Registration />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <div className="container-fluid">

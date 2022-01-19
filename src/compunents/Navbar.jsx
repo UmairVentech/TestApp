@@ -1,8 +1,17 @@
 import React from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../redux/login/loginAction";
 
 const Navbar = () => {
+  const { userInfo } = useSelector((state) => state.login);
+  const dispatch = useDispatch();
+
+  const logoutHandler = () => {
+    dispatch(logout());
+  };
+
   return (
     <div className="navbar">
       <div className="d-flex justify-content-evenly align-items-center w-100">
@@ -31,7 +40,7 @@ const Navbar = () => {
         <div>
           <h3 className="text-danger">
             <Link to="/" className="navLinks">
-              Tasks
+              Task
             </Link>
           </h3>
         </div>
@@ -51,11 +60,23 @@ const Navbar = () => {
               Production
             </Link>
           </li>
-          <li className="navItem">
-            <Link to="/login" className="navLinks">
-              Login
-            </Link>
-          </li>
+          {userInfo ? (
+            <li className="navItem">
+              <Link
+                to="#"
+                onClick={logoutHandler}
+                className="navLinks loginBtn"
+              >
+                Logout
+              </Link>
+            </li>
+          ) : (
+            <li className="navItem">
+              <Link to="/login" className="navLinks loginBtn">
+                Login
+              </Link>
+            </li>
+          )}
         </ul>
       </div>
     </div>
