@@ -29,3 +29,13 @@
 .navLinks:hover {
   color: rgb(233, 54, 54);
 }
+
+.loginBtn {
+  background-color: rgb(233, 54, 54);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.loginBtn:hover {
+  background-color: white;
+}
