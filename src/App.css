@@ -1,0 +1,64 @@
+.bgImage {
+  height: 70vh;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/public/images/image2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* .bgImage button {
+  background-color: gray;
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+}
+
+.bgImage button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+} */
+
+.moreButton {
+  background-color: gray;
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.moreButton:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.bgBottom {
+  background-color: lightgray;
+}
+
+.cardData {
+  width: 260px;
+}
+
+.bgGray {
+  background-color: rgb(46, 46, 46);
+}
+
+.bgBlue {
+  background-color: rgb(46, 146, 185);
+}
+
+.allPages {
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 400px) {
+  .mailTextSize {
+    font-size: 14px;
+  }
+}
